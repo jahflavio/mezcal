@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cruz de Oaxaca — El Alma del Mezcal | Mezcal Artesanal Premium</title>
+  <meta name="description" content="Mezcal artesanal 100% orgánico con más de 120 años de tradición. Producido en Santa Ana del Río, Oaxaca. Espadín, Mexicanito, Tobalá, Tepeztate y Jabalí. 45% Alc. Vol." />
+  <meta name="keywords" content="mezcal, artesanal, orgánico, Oaxaca, Cruz de Oaxaca, Santa Ana del Río, premium, espadín, tobalá, tepeztate, jabalí, mexicanito" />
+  <meta property="og:title" content="Cruz de Oaxaca — El Alma del Mezcal" />
+  <meta property="og:description" content="Mezcal artesanal 100% orgánico. Más de 120 años de tradición familiar en Santa Ana del Río, Oaxaca." />
+  <meta property="og:image" content="/img/bottle.png" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style-light.css" />
+</head>
+<body>
+
+  <!-- SVG Symbol for redesigned label logo -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <g id="jaguar-logo" viewBox="0 0 100 100">
+      <!-- Agave background leaves -->
+      <path d="M50 10 L54 45 L46 45 Z" fill="currentColor" opacity="0.65"/>
+      <path d="M50 10 L65 48 L46 45 Z" fill="currentColor" opacity="0.5"/>
+      <path d="M50 10 L35 48 L54 45 Z" fill="currentColor" opacity="0.5"/>
+      <path d="M50 20 L76 52 L50 48 Z" fill="currentColor" opacity="0.4"/>
+      <path d="M50 20 L24 52 L50 48 Z" fill="currentColor" opacity="0.4"/>
+      <!-- Jaguar head profile -->
+      <path d="M35 55 Q38 42 50 42 Q62 42 65 55 Q67 62 62 72 Q50 78 38 72 Q33 62 35 55 Z" fill="#121212" stroke="currentColor" stroke-width="1.8"/>
+      <!-- Aztec patterns -->
+      <path d="M43 48 L47 52 L43 56" stroke="currentColor" fill="none" stroke-width="1.2"/>
+      <path d="M57 48 L53 52 L57 56" stroke="currentColor" fill="none" stroke-width="1.2"/>
+      <!-- Ears -->
+      <path d="M38 44 L34 35 L42 42 Z" fill="#121212" stroke="currentColor" stroke-width="1"/>
+      <path d="M62 44 L66 35 L58 42 Z" fill="#121212" stroke="currentColor" stroke-width="1"/>
+      <!-- Eyes -->
+      <circle cx="45" cy="50" r="1.8" fill="currentColor"/>
+      <circle cx="55" cy="50" r="1.8" fill="currentColor"/>
+      <!-- Nose/mouth -->
+      <path d="M48 60 L52 60 L50 63 Z" fill="currentColor"/>
+      <path d="M46 68 Q50 71 54 68" stroke="currentColor" fill="none" stroke-width="1.2"/>
+      <!-- Crescent shadow -->
+      <path d="M50 74 A 20 20 0 0 1 50 42 A 20 20 0 0 0 50 74 Z" fill="currentColor" opacity="0.15"/>
+    </g>
+  </svg>
+  <!-- AGE GATE -->
+  <div id="age-gate" class="age-gate">
+    <div class="age-gate__content">
+      <img src="/img/label.jpg" alt="Cruz de Oaxaca Label" class="age-gate__logo" />
+      <h2 class="age-gate__title">¿Eres mayor de edad?</h2>
+      <p class="age-gate__text">Debes ser mayor de 18 años para acceder a este sitio.</p>
+      <div class="age-gate__buttons">
+        <button id="age-yes" class="btn btn--primary">Sí, soy mayor</button>
+        <button id="age-no" class="btn btn--outline">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="main-nav" class="nav">
+    <div class="nav__container">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-text">Cruz <span class="nav__logo-accent">de</span> Oaxaca</span>
+      </a>
+      <button id="nav-toggle" class="nav__toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu" class="nav__menu">
+        <li><a href="#historia" class="nav__link">Historia</a></li>
+        <li><a href="#filosofia" class="nav__link">Filosofía</a></li>
+        <li><a href="#proceso" class="nav__link">Proceso</a></li>
+        <li><a href="#mezcales" class="nav__link">Mezcales</a></li>
+        <li><a href="#experiencia" class="nav__link">Experiencia</a></li>
+        <li><a href="#contacto" class="nav__link btn btn--nav">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero__bg">
+      <img src="/img/hero-bg.png" alt="Agave fields in Oaxaca" class="hero__bg-img" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__tagline" data-animate="fade-up">Mezcal Artesanal · 100% Orgánico</p>
+      <h1 class="hero__title" data-animate="fade-up-delay">
+        El alma<br /><span class="hero__title-accent">del mezcal</span>
+      </h1>
+      <p class="hero__subtitle" data-animate="fade-up-delay-2">Santa Ana del Río, Oaxaca</p>
+      <div class="hero__bottle" data-animate="fade-in-scale">
+        <img src="/img/bottle.png" alt="Botella de Mezcal Cruz de Oaxaca" class="hero__bottle-img" />
+      </div>
+      <a href="#mezcales" class="hero__cta btn btn--primary" data-animate="fade-up-delay-3">Descubre Nuestros Mezcales</a>
+      <div class="hero__scroll-indicator" data-animate="fade-in">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section id="intro" class="section intro">
+    <div class="container">
+      <p class="intro__text" data-animate="reveal">
+        Desde hace más de 120 años, el fuego, la tierra y el maguey forman parte de nuestra historia. En Santa Ana del Río, Oaxaca, <strong>el mezcal no es tendencia: es herencia.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section id="historia" class="section historia">
+    <div class="container">
+      <div class="section__header" data-animate="fade-up">
+        <span class="section__label">Nuestra Historia</span>
+        <h2 class="section__title">Una tradición que ha sobrevivido <span class="text-accent">generaciones</span></h2>
+      </div>
+      <div class="historia__content">
+        <div class="historia__text" data-animate="fade-right">
+          <p>Nuestra historia comenzó hace más de 120 años en Santa Ana del Río, Oaxaca. Desde nuestros tatarabuelos, el mezcal ha sido parte de la vida cotidiana, del trabajo y del respeto por la tierra.</p>
+          <p>Nuestros abuelos elaboraban mezcal bajo método ancestral; hoy continuamos bajo el método artesanal, conservando la esencia y la disciplina del origen. <strong>No es una marca reciente: es una tradición que ha sobrevivido generaciones.</strong></p>
+          <div class="historia__badge">
+            <span class="historia__badge-icon">✦</span>
+            <p>De método ancestral a artesanal. El compromiso sigue siendo el mismo: calidad auténtica y respeto por el proceso.</p>
+          </div>
+        </div>
+        <div class="historia__visual" data-animate="fade-left">
+          <div class="historia__timeline">
+            <div class="timeline__item" data-animate="timeline">
+              <span class="timeline__year">1900</span>
+              <span class="timeline__text">Los tatarabuelos comienzan la tradición mezcalera</span>
+            </div>
+            <div class="timeline__item" data-animate="timeline">
+              <span class="timeline__year">1940</span>
+              <span class="timeline__text">Los abuelos perfeccionan el método ancestral</span>
+            </div>
+            <div class="timeline__item" data-animate="timeline">
+              <span class="timeline__year">1980</span>
+              <span class="timeline__text">Evolución al método artesanal sin perder la esencia</span>
+            </div>
+            <div class="timeline__item" data-animate="timeline">
+              <span class="timeline__year">Hoy</span>
+              <span class="timeline__text">La nueva generación lleva Cruz de Oaxaca al mundo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILOSOFÍA -->
+  <section id="filosofia" class="section filosofia">
+    <div class="container">
+      <div class="section__header" data-animate="fade-up">
+        <span class="section__label">Filosofía y Legado</span>
+        <h2 class="section__title">Lo que la naturaleza dicta, <span class="text-accent">nosotros lo respetamos</span></h2>
+      </div>
+      <div class="filosofia__content">
+        <div class="filosofia__quote" data-animate="scale-in">
+          <blockquote>
+            <p>El mezcal no se acelera, <em>se respeta.</em></p>
+          </blockquote>
+        </div>
+        <div class="filosofia__text" data-animate="fade-up">
+          <p>Creemos en el tiempo. En el agave que madura bajo el sol durante más de una década. En el fuego que transforma sin apresurar. Nuestra filosofía es simple: no alterar lo que la naturaleza dicta.</p>
+          <p>Nuestro legado no es solo producir, es conservar el método para que las próximas generaciones encuentren en él la misma verdad que nosotros recibimos.</p>
+        </div>
+        <div class="filosofia__badges" data-animate="stagger">
+          <div class="badge">
+            <span class="badge__icon">🌱</span>
+            <span class="badge__text">100% Orgánico</span>
+          </div>
+          <div class="badge">
+            <span class="badge__icon">🔥</span>
+            <span class="badge__text">Sin Químicos</span>
+          </div>
+          <div class="badge">
+            <span class="badge__icon">⏳</span>
+            <span class="badge__text">Producción Limitada</span>
+          </div>
+          <div class="badge">
+            <span class="badge__icon">🏔️</span>
+            <span class="badge__text">Sustentable</span>
+          </div>
+        </div>
+        <p class="filosofia__closing" data-animate="fade-up"><em>Un legado que no se modifica, solo se perfecciona con el tiempo.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section id="proceso" class="section proceso">
+    <div class="container">
+      <div class="section__header" data-animate="fade-up">
+        <span class="section__label">Proceso Artesanal</span>
+        <h2 class="section__title">Cada etapa respeta el ritmo <span class="text-accent">antiguo del mezcal</span></h2>
+      </div>
+      <p class="proceso__intro" data-animate="fade-up">Todo comienza con el maguey maduro, cortado a mano cuando el tiempo lo indica.</p>
+      <div class="proceso__steps">
+        <div class="proceso__step" data-animate="process-step">
+          <div class="proceso__step-number">01</div>
+          <div class="proceso__step-icon">🌿</div>
+          <h3 class="proceso__step-title">Jima</h3>
+          <p class="proceso__step-text">El maguey maduro, cortado a mano cuando el tiempo lo indica.</p>
+        </div>
+        <div class="proceso__step" data-animate="process-step">
+          <div class="proceso__step-number">02</div>
+          <div class="proceso__step-icon">🔥</div>
+          <h3 class="proceso__step-title">Cocción</h3>
+          <p class="proceso__step-text">Cocinado lentamente en horno de piedra bajo tierra, donde el fuego transforma la fibra en dulzura.</p>
+        </div>
+        <div class="proceso__step" data-animate="process-step">
+          <div class="proceso__step-number">03</div>
+          <div class="proceso__step-icon">⚙️</div>
+          <h3 class="proceso__step-title">Molienda</h3>
+          <p class="proceso__step-text">Pausada, con piedra que gira sin prisa. Sin máquinas. Sin atajos.</p>
+        </div>
+        <div class="proceso__step" data-animate="process-step">
+          <div class="proceso__step-number">04</div>
+          <div class="proceso__step-icon">🫧</div>
+          <h3 class="proceso__step-title">Fermentación</h3>
+          <p class="proceso__step-text">Ocurre de manera natural, viva. En tinas de madera, libre de aceleradores.</p>
+        </div>
+        <div class="proceso__step" data-animate="process-step">
+          <div class="proceso__step-number">05</div>
+          <div class="proceso__step-icon">💧</div>
+          <h3 class="proceso__step-title">Destilación</h3>
+          <p class="proceso__step-text">Doble destilado en alambique tradicional. El destilado se afina hasta alcanzar su carácter definitivo.</p>
+        </div>
+      </div>
+      <div class="proceso__seal" data-animate="fade-up">
+        <p>100% Artesanal · Sin Químicos · Sin Aceleradores</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEZCALES -->
+  <section id="mezcales" class="section mezcales">
+    <div class="container">
+      <div class="section__header" data-animate="fade-up">
+        <span class="section__label">Nuestros Mezcales</span>
+        <h2 class="section__title">Cada agave expresa un carácter distinto <span class="text-accent">de la tierra</span></h2>
+      </div>
+      <p class="mezcales__intro" data-animate="fade-up">El Espadín representa nuestra raíz y equilibrio. Los silvestres — Mexicanito, Tobalá, Tepeztate y Jabalí — nacen en laderas y campos abiertos, creciendo durante más de una década. Son mezcales de paciencia y territorio.</p>
+      
+      <div class="mezcales__grid">
+        <!-- ESPADÍN -->
+        <div class="mezcal-card" data-animate="card" data-mezcal="espadin">
+          <!-- FLOTATING BOTTLE -->
+          <div class="bottle-wrapper">
+            <img src="/img/bottle-espadin.png" alt="Botella Mezcal Espadín" class="bottle-img" />
+          </div>
+
+          <!-- CARD CONTENT -->
+          <div class="mezcal-card__content">
+            <div class="mezcal-card__header">
+              <span class="mezcal-card__agave">Agave angustifolia</span>
+              <h3 class="mezcal-card__name">Espadín</h3>
+              <span class="mezcal-card__subtitle">Nuestra raíz y equilibrio</span>
+            </div>
+            <div class="mezcal-card__details">
+              <div class="mezcal-card__stat">
+                <span class="mezcal-card__stat-value">6–8</span>
+                <span class="mezcal-card__stat-label">Años maduración</span>
+              </div>
+              <div class="mezcal-card__stat">
+                <span class="mezcal-card__stat-value">45%</span>
+                <span class="mezcal-card__stat-label">Alc. Vol.</span>
+              </div>
+            </div>
+            <div class="mezcal-card__profile">
+              <p class="mezcal-card__profile-label">Perfil: <strong>Clásico, redondo y versátil</strong></p>
+              <p class="mezcal-card__notes">Tonos dulces, frutales y cítricos con toques herbales y suave ahumado.</p>
+            </div>
+            <button class="btn btn--outline btn--full">Lo Quiero</button>
+          </div>
+        </div>
+
+        <!-- MEXICANITO -->
+        <div class="mezcal-card" data-animate="card" data-mezcal="mexicanito">
+          <!-- FLOTATING BOTTLE -->
+          <div class="bottle-wrapper">
+            <img src="/img/bottle-mexicanito.png" alt="Botella Mezcal Mexicanito" class="bottle-img" />
+          </div>
+
+          <!-- CARD CONTENT -->
+          <div class="mezcal-card__content">
+            <div class="mezcal-card__header">
+              <span class="mezcal-card__agave">Agave rhodacantha</span>
+              <h3 class="mezcal-card__name">Mexicanito</h3>
+              <span class="mezcal-card__subtitle">Una década de paciencia en cada sorbo</span>
+            </div>
+            <div class="mezcal-card__details">
+              <div class="mezcal-card__stat">
+                <span class="mezcal-card__stat-value">10–12</span>
+                <span class="mezcal-card__stat-label">Años maduración</span>
+              </div>
+              <div class="mezcal-card__stat">
+                <span class="mezcal-card__stat-value">45%</span>
+                <span class="mezcal-card__stat-label">Alc. Vol.</span>
+              </div>
+            </div>
+            <div class="mezcal-card__profile">
+              <p class="mezcal-card__profile-label">Perfil: <strong>Elegante, estructurado y sutil</strong></p>
+              <p class="mezcal-card__notes">Frutas maduras con final mineral y vegetal fresco.</p>
+            </div>
+            <button class="btn btn--outline btn--full">Lo Quiero</button>
+          </div>
+        </div>
+
+        <!-- TOBALÁ -->
+        <div class="mezcal-card" data-animate="card" data-mezcal="tobala">
+          <!-- FLOTATING BOTTLE -->
+          <div class="bottle-wrapper">
+            <img src="/img/bottle-tobala.png" alt="Botella Mezcal Tobalá" class="bottle-img" />
+          </div>
+
+          <!-- CARD CONTENT -->
+          <div class="mezcal-card__content">
+            <span class="mezcal-card__badge">★ Rey de los Mezcales</span>
+            <div class="mezcal-card__header">
+              <span class="mezcal-card__agave">Agave potatorum</span>
+              <h3 class="mezcal-card__name">Tobalá</h3>
+              <span class="mezcal-card__subtitle">El rey de los mezcales</span>
+            </div>
+            <div class="mezcal-card__details">
+              <div class="mezcal-card__stat">
+                <span class="mezcal-card__stat-value">10–16</span>
+                <span class="mezcal-card__stat-label">Años maduración</span>
+              </div>
+              <div class="mezcal-card__stat">
+                <span class="mezcal-card__stat-value">45%</span>
+                <span class="mezcal-card__stat-label">Alc. Vol.</span>
+              </div>
+            </div>
+            <div class="mezcal-card__profile">
+              <p class="mezcal-card__profile-label">Perfil: <strong>Delicado, complejo y sumamente elegante</strong></p>
+              <p class="mezcal-card__notes">Miel, vainilla, chocolate, florales, tabaco y cuero.</p>
+            </div>
+            <button class="btn btn--outline btn--full">Lo Quiero</button>
+          </div>
+        </div>
+
+        <!-- TEPEZTATE -->
+        <div class="mezcal-card" data-animate="card" data-mezcal="tepeztate">
+          <div class="mezcal-card__inner">
+            <!-- FACE FRONT -->
+        <!-- TEPEZTATE -->
+        <div class="mezcal-card" data-animate="card" data-mezcal="tepeztate">
+          <!-- FLOTATING BOTTLE -->
+          <div class="bottle-wrapper">
+            <img src="/img/bottle-tepeztate.png" alt="Botella Mezcal Tepeztate" class="bottle-img" />
+          </div>
+
+          <!-- CARD CONTENT -->
+          <div class="mezcal-card__content">
+            <div class="mezcal-card__header">
+              <span class="mezcal-card__agave">Agave marmorata</span>
+              <h3 class="mezcal-card__name">Tepeztate</h3>
+              <span class="mezcal-card__subtitle">El maguey que se aferra a los acantilados</span>
+            </div>
+            <div class="mezcal-card__details">
+              <div class="mezcal-card__stat">
+                <span class="mezcal-card__stat-value">10–16</span>
+                <span class="mezcal-card__stat-label">Años maduración</span>
+              </div>
+              <div class="mezcal-card__stat">
+                <span class="mezcal-card__stat-value">45%</span>
+                <span class="mezcal-card__stat-label">Alc. Vol.</span>
+              </div>
+            </div>
+            <div class="mezcal-card__profile">
+              <p class="mezcal-card__profile-label">Perfil: <strong>Potente, de gran personalidad</strong></p>
+              <p class="mezcal-card__notes">Té de limón, pimienta, jalapeño verde y flores silvestres.</p>
+            </div>
+            <button class="btn btn--outline btn--full">Lo Quiero</button>
+          </div>
+        </div>
+
+        <!-- JABALÍ -->
+        <div class="mezcal-card" data-animate="card" data-mezcal="jabali">
+          <!-- FLOTATING BOTTLE -->
+          <div class="bottle-wrapper">
+            <img src="/img/bottle-jabali.png" alt="Botella Mezcal Jabalí" class="bottle-img" />
+          </div>
+
+          <!-- CARD CONTENT -->
+          <div class="mezcal-card__content">
+            <span class="mezcal-card__badge">⚡ Edición Limitada</span>
+            <div class="mezcal-card__header">
+              <span class="mezcal-card__agave">Agave convallis</span>
+              <h3 class="mezcal-card__name">Jabalí</h3>
+              <span class="mezcal-card__subtitle">El más indomable de la familia</span>
+            </div>
+            <div class="mezcal-card__details">
+              <div class="mezcal-card__stat">
+                <span class="mezcal-card__stat-value">10–16</span>
+                <span class="mezcal-card__stat-label">Años maduración</span>
+              </div>
+              <div class="mezcal-card__stat">
+                <span class="mezcal-card__stat-value">45%</span>
+                <span class="mezcal-card__stat-label">Alc. Vol.</span>
+              </div>
+            </div>
+            <div class="mezcal-card__profile">
+              <p class="mezcal-card__profile-label">Perfil: <strong>Salvaje, raro y de enorme complejidad</strong></p>
+              <p class="mezcal-card__notes">Terroso, intenso, especiado, retrogusto largo y persistente.</p>
+            </div>
+            <button class="btn btn--outline btn--full">Lo Quiero</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia" class="section experiencia">
+    <div class="experiencia__parallax">
+      <img src="/img/hero-bg.png" alt="Campos de agave" class="experiencia__bg" />
+      <div class="experiencia__overlay"></div>
+    </div>
+    <div class="container experiencia__content">
+      <h2 class="experiencia__title" data-animate="fade-up">El mezcal no solo se bebe, <span class="text-accent">se comprende.</span></h2>
+      <p class="experiencia__text" data-animate="fade-up">Es campo, es fuego, es silencio y celebración. Cada sorbo guarda la memoria de quienes lo trabajaron antes. Es una experiencia que conecta con la tierra y con uno mismo.</p>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section contacto">
+    <div class="container">
+      <div class="section__header" data-animate="fade-up">
+        <span class="section__label">Contacto</span>
+        <h2 class="section__title">El mezcal también es <span class="text-accent">encuentro</span></h2>
+      </div>
+      <p class="contacto__intro" data-animate="fade-up">Las puertas del palenque permanecen abiertas para quienes deseen conocer el origen de cada botella y la historia que la acompaña.</p>
+      <div class="contacto__grid">
+        <form id="contact-form" class="contacto__form" data-animate="fade-right">
+          <div class="form__group">
+            <label for="contact-name">Nombre</label>
+            <input type="text" id="contact-name" name="name" required placeholder="Tu nombre" />
+          </div>
+          <div class="form__group">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" required placeholder="tu@email.com" />
+          </div>
+          <div class="form__group">
+            <label for="contact-subject">Asunto</label>
+            <select id="contact-subject" name="subject">
+              <option value="pedido">Pedido / Compra</option>
+              <option value="distribucion">Distribución</option>
+              <option value="visita">Visita al Palenque</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="contact-message">Mensaje</label>
+            <textarea id="contact-message" name="message" rows="4" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Enviar Mensaje</button>
+        </form>
+        <div class="contacto__info" data-animate="fade-left">
+          <div class="contacto__info-item">
+            <span class="contacto__info-icon">📍</span>
+            <div>
+              <h4>Ubicación</h4>
+              <p>Santa Ana del Río, Oaxaca, México</p>
+            </div>
+          </div>
+          <div class="contacto__info-item">
+            <span class="contacto__info-icon">📧</span>
+            <div>
+              <h4>Email</h4>
+              <p>contacto@cruzdeoaxaca.com</p>
+            </div>
+          </div>
+          <div class="contacto__info-item">
+            <span class="contacto__info-icon">📱</span>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>Contáctanos directamente</p>
+            </div>
+          </div>
+          <div class="contacto__quote">
+            <p><em>Desde Santa Ana del Río, compartimos nuestra tradición con quienes buscan autenticidad y raíz.</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__logo">Cruz <span class="text-accent">de</span> Oaxaca</span>
+          <p class="footer__tagline">El alma del mezcal</p>
+        </div>
+        <div class="footer__links">
+          <a href="#historia">Historia</a>
+          <a href="#filosofia">Filosofía</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#mezcales">Mezcales</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+      <div class="footer__quote">
+        <p>Nuestro mayor reconocimiento es mantener viva la tradición que comenzó hace más de un siglo. El verdadero prestigio está en la coherencia y en la calidad que perdura.</p>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">Cruz de Oaxaca · Mezcal Artesanal · Santa Ana del Río, Oaxaca<br />100% Orgánico · 45% Alc. Vol. · Presentaciones de 750 ml y 1 Litro</p>
+        <p class="footer__warning">El abuso en el consumo de este producto es nocivo para la salud.</p>
+        <p class="footer__copy">&copy; 2026 Cruz de Oaxaca. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

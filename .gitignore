@@ -1,0 +1,9 @@
+# Node
+web/node_modules/
+web/dist/
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
