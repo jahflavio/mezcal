@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/style-light.css" />
+  <link rel="stylesheet" href="/src/style.css" />
 </head>
 <body>
 
@@ -80,7 +80,15 @@
   <!-- HERO -->
   <section id="hero" class="hero">
     <div class="hero__bg">
-      <img src="/img/hero-bg.png" alt="Agave fields in Oaxaca" class="hero__bg-img" />
+      <video
+        id="hero-video"
+        class="hero__bg-video"
+        muted
+        playsinline
+        preload="auto"
+      >
+        <source src="/video/Jaguar cruz de oaxaca.mp4" type="video/mp4" />
+      </video>
       <div class="hero__overlay"></div>
     </div>
     <div class="hero__content">
@@ -89,9 +97,6 @@
         El alma<br /><span class="hero__title-accent">del mezcal</span>
       </h1>
       <p class="hero__subtitle" data-animate="fade-up-delay-2">Santa Ana del Río, Oaxaca</p>
-      <div class="hero__bottle" data-animate="fade-in-scale">
-        <img src="/img/bottle.png" alt="Botella de Mezcal Cruz de Oaxaca" class="hero__bottle-img" />
-      </div>
       <a href="#mezcales" class="hero__cta btn btn--primary" data-animate="fade-up-delay-3">Descubre Nuestros Mezcales</a>
       <div class="hero__scroll-indicator" data-animate="fade-in">
         <span>Scroll</span>
@@ -168,19 +173,27 @@
         </div>
         <div class="filosofia__badges" data-animate="stagger">
           <div class="badge">
-            <span class="badge__icon">🌱</span>
+            <span class="badge__icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22s1.25-5.06 4.38-8.2C9.53 10.64 14.77 10 14.77 10s.64 5.24-2.8 8.38C8.83 21.5 2.2 22 2.2 22z"></path><path d="M12 12a14 14 0 0 0 9-9 9 9 0 0 0-9 9z"></path><path d="M19 3s-1.5 5.5-6 6.5"></path></svg>
+            </span>
             <span class="badge__text">100% Orgánico</span>
           </div>
           <div class="badge">
-            <span class="badge__icon">🔥</span>
+            <span class="badge__icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+            </span>
             <span class="badge__text">Sin Químicos</span>
           </div>
           <div class="badge">
-            <span class="badge__icon">⏳</span>
+            <span class="badge__icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h14M5 22h14M17 2v6.24a6 6 0 0 1-1.76 4.24l-3.24 3.24-3.24-3.24A6 6 0 0 1 7 8.24V2M7 22v-6.24a6 6 0 0 1 1.76-4.24l3.24-3.24 3.24 3.24A6 6 0 0 1 17 15.76V22"></path></svg>
+            </span>
             <span class="badge__text">Producción Limitada</span>
           </div>
           <div class="badge">
-            <span class="badge__icon">🏔️</span>
+            <span class="badge__icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l4 8 5-5 5 15H2L8 3z"></path></svg>
+            </span>
             <span class="badge__text">Sustentable</span>
           </div>
         </div>
@@ -200,31 +213,41 @@
       <div class="proceso__steps">
         <div class="proceso__step" data-animate="process-step">
           <div class="proceso__step-number">01</div>
-          <div class="proceso__step-icon">🌿</div>
+          <div class="proceso__step-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M12 2v20M12 10a4 4 0 0 1-4-4M12 14a4 4 0 0 0 4 4"></path></svg>
+          </div>
           <h3 class="proceso__step-title">Jima</h3>
           <p class="proceso__step-text">El maguey maduro, cortado a mano cuando el tiempo lo indica.</p>
         </div>
         <div class="proceso__step" data-animate="process-step">
           <div class="proceso__step-number">02</div>
-          <div class="proceso__step-icon">🔥</div>
+          <div class="proceso__step-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 0-3 3.5-3 6.5s3 5.5 3 5.5 3-2.5 3-5.5S12 2z"></path><path d="M12 14c0 0-5 2.5-5 5.5S12 22 12 22s5-1 5-4-5-4-5-4z"></path></svg>
+          </div>
           <h3 class="proceso__step-title">Cocción</h3>
           <p class="proceso__step-text">Cocinado lentamente en horno de piedra bajo tierra, donde el fuego transforma la fibra en dulzura.</p>
         </div>
         <div class="proceso__step" data-animate="process-step">
           <div class="proceso__step-number">03</div>
-          <div class="proceso__step-icon">⚙️</div>
+          <div class="proceso__step-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+          </div>
           <h3 class="proceso__step-title">Molienda</h3>
           <p class="proceso__step-text">Pausada, con piedra que gira sin prisa. Sin máquinas. Sin atajos.</p>
         </div>
         <div class="proceso__step" data-animate="process-step">
           <div class="proceso__step-number">04</div>
-          <div class="proceso__step-icon">🫧</div>
+          <div class="proceso__step-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
+          </div>
           <h3 class="proceso__step-title">Fermentación</h3>
           <p class="proceso__step-text">Ocurre de manera natural, viva. En tinas de madera, libre de aceleradores.</p>
         </div>
         <div class="proceso__step" data-animate="process-step">
           <div class="proceso__step-number">05</div>
-          <div class="proceso__step-icon">💧</div>
+          <div class="proceso__step-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-13-7-13S5 10.7 5 15a7 7 0 0 0 7 7z"></path></svg>
+          </div>
           <h3 class="proceso__step-title">Destilación</h3>
           <p class="proceso__step-text">Doble destilado en alambique tradicional. El destilado se afina hasta alcanzar su carácter definitivo.</p>
         </div>
@@ -244,172 +267,229 @@
       </div>
       <p class="mezcales__intro" data-animate="fade-up">El Espadín representa nuestra raíz y equilibrio. Los silvestres — Mexicanito, Tobalá, Tepeztate y Jabalí — nacen en laderas y campos abiertos, creciendo durante más de una década. Son mezcales de paciencia y territorio.</p>
       
-      <div class="mezcales__grid">
-        <!-- ESPADÍN -->
-        <div class="mezcal-card" data-animate="card" data-mezcal="espadin">
-          <!-- FLOTATING BOTTLE -->
-          <div class="bottle-wrapper">
-            <img src="/img/bottle-espadin.png" alt="Botella Mezcal Espadín" class="bottle-img" />
+      <!-- LUXURY DYNAMIC SHOWCASE -->
+      <div class="mezcal-showcase">
+        
+        <!-- SELECTOR MENU (Left Column) -->
+        <div class="mezcal-showcase__menu">
+          <div class="mezcal-showcase__menu-item active" data-target="espadin">
+            <span class="menu-item__num">01</span>
+            <div class="menu-item__text">
+              <h4 class="menu-item__name">Espadín</h4>
+              <span class="menu-item__agave">Agave angustifolia</span>
+            </div>
+            <div class="menu-item__indicator"></div>
+          </div>
+          
+          <div class="mezcal-showcase__menu-item" data-target="mexicanito">
+            <span class="menu-item__num">02</span>
+            <div class="menu-item__text">
+              <h4 class="menu-item__name">Mexicanito</h4>
+              <span class="menu-item__agave">Agave rhodacantha</span>
+            </div>
+            <div class="menu-item__indicator"></div>
           </div>
 
-          <!-- CARD CONTENT -->
-          <div class="mezcal-card__content">
-            <div class="mezcal-card__header">
-              <span class="mezcal-card__agave">Agave angustifolia</span>
-              <h3 class="mezcal-card__name">Espadín</h3>
-              <span class="mezcal-card__subtitle">Nuestra raíz y equilibrio</span>
+          <div class="mezcal-showcase__menu-item" data-target="tobala">
+            <span class="menu-item__num">03</span>
+            <div class="menu-item__text">
+              <h4 class="menu-item__name">Tobalá</h4>
+              <span class="menu-item__agave">Agave potatorum</span>
             </div>
-            <div class="mezcal-card__details">
-              <div class="mezcal-card__stat">
-                <span class="mezcal-card__stat-value">6–8</span>
-                <span class="mezcal-card__stat-label">Años maduración</span>
-              </div>
-              <div class="mezcal-card__stat">
-                <span class="mezcal-card__stat-value">45%</span>
-                <span class="mezcal-card__stat-label">Alc. Vol.</span>
-              </div>
+            <div class="menu-item__indicator"></div>
+          </div>
+
+          <div class="mezcal-showcase__menu-item" data-target="tepeztate">
+            <span class="menu-item__num">04</span>
+            <div class="menu-item__text">
+              <h4 class="menu-item__name">Tepeztate</h4>
+              <span class="menu-item__agave">Agave marmorata</span>
             </div>
-            <div class="mezcal-card__profile">
-              <p class="mezcal-card__profile-label">Perfil: <strong>Clásico, redondo y versátil</strong></p>
-              <p class="mezcal-card__notes">Tonos dulces, frutales y cítricos con toques herbales y suave ahumado.</p>
+            <div class="menu-item__indicator"></div>
+          </div>
+
+          <div class="mezcal-showcase__menu-item" data-target="jabali">
+            <span class="menu-item__num">05</span>
+            <div class="menu-item__text">
+              <h4 class="menu-item__name">Jabalí</h4>
+              <span class="menu-item__agave">Agave convallis</span>
             </div>
-            <button class="btn btn--outline btn--full">Lo Quiero</button>
+            <div class="menu-item__indicator"></div>
           </div>
         </div>
 
-        <!-- MEXICANITO -->
-        <div class="mezcal-card" data-animate="card" data-mezcal="mexicanito">
-          <!-- FLOTATING BOTTLE -->
-          <div class="bottle-wrapper">
-            <img src="/img/bottle-mexicanito.png" alt="Botella Mezcal Mexicanito" class="bottle-img" />
+        <!-- VISUAL PANEL (Center Column) -->
+        <div class="mezcal-showcase__visual">
+          <div class="showcase-glow" id="showcase-glow"></div>
+          
+          <!-- ESPADÍN VISUAL -->
+          <div class="visual-panel active" data-panel="espadin">
+            <div class="visual-panel__bottle-wrapper">
+              <img src="/img/bottle-espadin.png" alt="Botella Mezcal Espadín" class="showcase-bottle" />
+            </div>
           </div>
 
-          <!-- CARD CONTENT -->
-          <div class="mezcal-card__content">
-            <div class="mezcal-card__header">
-              <span class="mezcal-card__agave">Agave rhodacantha</span>
-              <h3 class="mezcal-card__name">Mexicanito</h3>
-              <span class="mezcal-card__subtitle">Una década de paciencia en cada sorbo</span>
+          <!-- MEXICANITO VISUAL -->
+          <div class="visual-panel" data-panel="mexicanito">
+            <div class="visual-panel__bottle-wrapper">
+              <img src="/img/bottle-mexicanito.png" alt="Botella Mezcal Mexicanito" class="showcase-bottle" />
             </div>
-            <div class="mezcal-card__details">
-              <div class="mezcal-card__stat">
-                <span class="mezcal-card__stat-value">10–12</span>
-                <span class="mezcal-card__stat-label">Años maduración</span>
-              </div>
-              <div class="mezcal-card__stat">
-                <span class="mezcal-card__stat-value">45%</span>
-                <span class="mezcal-card__stat-label">Alc. Vol.</span>
-              </div>
+          </div>
+
+          <!-- TOBALÁ VISUAL -->
+          <div class="visual-panel" data-panel="tobala">
+            <div class="visual-panel__bottle-wrapper">
+              <img src="/img/bottle-tobala.png" alt="Botella Mezcal Tobalá" class="showcase-bottle" />
             </div>
-            <div class="mezcal-card__profile">
-              <p class="mezcal-card__profile-label">Perfil: <strong>Elegante, estructurado y sutil</strong></p>
-              <p class="mezcal-card__notes">Frutas maduras con final mineral y vegetal fresco.</p>
+          </div>
+
+          <!-- TEPEZTATE VISUAL -->
+          <div class="visual-panel" data-panel="tepeztate">
+            <div class="visual-panel__bottle-wrapper">
+              <img src="/img/bottle-tepeztate.png" alt="Botella Mezcal Tepeztate" class="showcase-bottle" />
             </div>
-            <button class="btn btn--outline btn--full">Lo Quiero</button>
+          </div>
+
+          <!-- JABALÍ VISUAL -->
+          <div class="visual-panel" data-panel="jabali">
+            <div class="visual-panel__bottle-wrapper">
+              <img src="/img/bottle-jabali.png" alt="Botella Mezcal Jabalí" class="showcase-bottle" />
+            </div>
           </div>
         </div>
 
-        <!-- TOBALÁ -->
-        <div class="mezcal-card" data-animate="card" data-mezcal="tobala">
-          <!-- FLOTATING BOTTLE -->
-          <div class="bottle-wrapper">
-            <img src="/img/bottle-tobala.png" alt="Botella Mezcal Tobalá" class="bottle-img" />
+        <!-- DETAILS COLUMN (Right Column) -->
+        <div class="mezcal-showcase__details">
+          
+          <!-- ESPADÍN PANEL -->
+          <div class="details-panel active" data-panel="espadin">
+            <div class="details-panel__header">
+              <span class="details-panel__agave">Agave angustifolia</span>
+              <h3 class="details-panel__title">Espadín</h3>
+              <p class="details-panel__subtitle">Nuestra raíz y equilibrio</p>
+            </div>
+            <div class="details-panel__specs">
+              <div class="details-panel__spec">
+                <span class="spec-value">6–8 Años</span>
+                <span class="spec-label">Maduración</span>
+              </div>
+              <div class="details-panel__spec">
+                <span class="spec-value">45%</span>
+                <span class="spec-label">Alc. Vol.</span>
+              </div>
+            </div>
+            <div class="details-panel__profile">
+              <span class="profile-title">Perfil Sensorial</span>
+              <p class="profile-intro">Perfil: <strong>Clásico, redondo y versátil</strong></p>
+              <p class="profile-notes">Tonos dulces, frutales y cítricos con toques herbales y suave ahumado.</p>
+            </div>
+            <a href="espadin.html" class="btn btn--outline btn--full">Ver Detalles</a>
           </div>
 
-          <!-- CARD CONTENT -->
-          <div class="mezcal-card__content">
-            <span class="mezcal-card__badge">★ Rey de los Mezcales</span>
-            <div class="mezcal-card__header">
-              <span class="mezcal-card__agave">Agave potatorum</span>
-              <h3 class="mezcal-card__name">Tobalá</h3>
-              <span class="mezcal-card__subtitle">El rey de los mezcales</span>
+          <!-- MEXICANITO PANEL -->
+          <div class="details-panel" data-panel="mexicanito">
+            <div class="details-panel__header">
+              <span class="details-panel__agave">Agave rhodacantha</span>
+              <h3 class="details-panel__title">Mexicanito</h3>
+              <p class="details-panel__subtitle">Una década de paciencia en cada sorbo</p>
             </div>
-            <div class="mezcal-card__details">
-              <div class="mezcal-card__stat">
-                <span class="mezcal-card__stat-value">10–16</span>
-                <span class="mezcal-card__stat-label">Años maduración</span>
+            <div class="details-panel__specs">
+              <div class="details-panel__spec">
+                <span class="spec-value">10–12 Años</span>
+                <span class="spec-label">Maduración</span>
               </div>
-              <div class="mezcal-card__stat">
-                <span class="mezcal-card__stat-value">45%</span>
-                <span class="mezcal-card__stat-label">Alc. Vol.</span>
+              <div class="details-panel__spec">
+                <span class="spec-value">45%</span>
+                <span class="spec-label">Alc. Vol.</span>
               </div>
             </div>
-            <div class="mezcal-card__profile">
-              <p class="mezcal-card__profile-label">Perfil: <strong>Delicado, complejo y sumamente elegante</strong></p>
-              <p class="mezcal-card__notes">Miel, vainilla, chocolate, florales, tabaco y cuero.</p>
+            <div class="details-panel__profile">
+              <span class="profile-title">Perfil Sensorial</span>
+              <p class="profile-intro">Perfil: <strong>Elegante, estructurado y sutil</strong></p>
+              <p class="profile-notes">Frutas maduras con final mineral y vegetal fresco.</p>
             </div>
-            <button class="btn btn--outline btn--full">Lo Quiero</button>
+            <a href="mexicanito.html" class="btn btn--outline btn--full">Ver Detalles</a>
           </div>
+
+          <!-- TOBALÁ PANEL -->
+          <div class="details-panel" data-panel="tobala">
+            <span class="details-panel__badge">★ Rey de los Mezcales</span>
+            <div class="details-panel__header">
+              <span class="details-panel__agave">Agave potatorum</span>
+              <h3 class="details-panel__title">Tobalá</h3>
+              <p class="details-panel__subtitle">El rey de los mezcales</p>
+            </div>
+            <div class="details-panel__specs">
+              <div class="details-panel__spec">
+                <span class="spec-value">10–16 Años</span>
+                <span class="spec-label">Maduración</span>
+              </div>
+              <div class="details-panel__spec">
+                <span class="spec-value">45%</span>
+                <span class="spec-label">Alc. Vol.</span>
+              </div>
+            </div>
+            <div class="details-panel__profile">
+              <span class="profile-title">Perfil Sensorial</span>
+              <p class="profile-intro">Perfil: <strong>Delicado, complejo y sumamente elegante</strong></p>
+              <p class="profile-notes">Miel, vainilla, chocolate, florales, tabaco y cuero.</p>
+            </div>
+            <a href="tobala.html" class="btn btn--outline btn--full">Ver Detalles</a>
+          </div>
+
+          <!-- TEPEZTATE PANEL -->
+          <div class="details-panel" data-panel="tepeztate">
+            <div class="details-panel__header">
+              <span class="details-panel__agave">Agave marmorata</span>
+              <h3 class="details-panel__title">Tepeztate</h3>
+              <p class="details-panel__subtitle">El maguey que se aferra a los acantilados</p>
+            </div>
+            <div class="details-panel__specs">
+              <div class="details-panel__spec">
+                <span class="spec-value">10–16 Años</span>
+                <span class="spec-label">Maduración</span>
+              </div>
+              <div class="details-panel__spec">
+                <span class="spec-value">45%</span>
+                <span class="spec-label">Alc. Vol.</span>
+              </div>
+            </div>
+            <div class="details-panel__profile">
+              <span class="profile-title">Perfil Sensorial</span>
+              <p class="profile-intro">Perfil: <strong>Potente, de gran personalidad</strong></p>
+              <p class="profile-notes">Té de limón, pimienta, jalapeño verde y flores silvestres.</p>
+            </div>
+            <a href="tepeztate.html" class="btn btn--outline btn--full">Ver Detalles</a>
+          </div>
+
+          <!-- JABALÍ PANEL -->
+          <div class="details-panel" data-panel="jabali">
+            <span class="details-panel__badge">⚡ Edición Limitada</span>
+            <div class="details-panel__header">
+              <span class="details-panel__agave">Agave convallis</span>
+              <h3 class="details-panel__title">Jabalí</h3>
+              <p class="details-panel__subtitle">El más indomable de la familia</p>
+            </div>
+            <div class="details-panel__specs">
+              <div class="details-panel__spec">
+                <span class="spec-value">10–16 Años</span>
+                <span class="spec-label">Maduración</span>
+              </div>
+              <div class="details-panel__spec">
+                <span class="spec-value">45%</span>
+                <span class="spec-label">Alc. Vol.</span>
+              </div>
+            </div>
+            <div class="details-panel__profile">
+              <span class="profile-title">Perfil Sensorial</span>
+              <p class="profile-intro">Perfil: <strong>Salvaje, raro y de enorme complejidad</strong></p>
+              <p class="profile-notes">Terroso, intenso, especiado, retrogusto largo y persistente.</p>
+            </div>
+            <a href="jabali.html" class="btn btn--outline btn--full">Ver Detalles</a>
+          </div>
+
         </div>
 
-        <!-- TEPEZTATE -->
-        <div class="mezcal-card" data-animate="card" data-mezcal="tepeztate">
-          <div class="mezcal-card__inner">
-            <!-- FACE FRONT -->
-        <!-- TEPEZTATE -->
-        <div class="mezcal-card" data-animate="card" data-mezcal="tepeztate">
-          <!-- FLOTATING BOTTLE -->
-          <div class="bottle-wrapper">
-            <img src="/img/bottle-tepeztate.png" alt="Botella Mezcal Tepeztate" class="bottle-img" />
-          </div>
-
-          <!-- CARD CONTENT -->
-          <div class="mezcal-card__content">
-            <div class="mezcal-card__header">
-              <span class="mezcal-card__agave">Agave marmorata</span>
-              <h3 class="mezcal-card__name">Tepeztate</h3>
-              <span class="mezcal-card__subtitle">El maguey que se aferra a los acantilados</span>
-            </div>
-            <div class="mezcal-card__details">
-              <div class="mezcal-card__stat">
-                <span class="mezcal-card__stat-value">10–16</span>
-                <span class="mezcal-card__stat-label">Años maduración</span>
-              </div>
-              <div class="mezcal-card__stat">
-                <span class="mezcal-card__stat-value">45%</span>
-                <span class="mezcal-card__stat-label">Alc. Vol.</span>
-              </div>
-            </div>
-            <div class="mezcal-card__profile">
-              <p class="mezcal-card__profile-label">Perfil: <strong>Potente, de gran personalidad</strong></p>
-              <p class="mezcal-card__notes">Té de limón, pimienta, jalapeño verde y flores silvestres.</p>
-            </div>
-            <button class="btn btn--outline btn--full">Lo Quiero</button>
-          </div>
-        </div>
-
-        <!-- JABALÍ -->
-        <div class="mezcal-card" data-animate="card" data-mezcal="jabali">
-          <!-- FLOTATING BOTTLE -->
-          <div class="bottle-wrapper">
-            <img src="/img/bottle-jabali.png" alt="Botella Mezcal Jabalí" class="bottle-img" />
-          </div>
-
-          <!-- CARD CONTENT -->
-          <div class="mezcal-card__content">
-            <span class="mezcal-card__badge">⚡ Edición Limitada</span>
-            <div class="mezcal-card__header">
-              <span class="mezcal-card__agave">Agave convallis</span>
-              <h3 class="mezcal-card__name">Jabalí</h3>
-              <span class="mezcal-card__subtitle">El más indomable de la familia</span>
-            </div>
-            <div class="mezcal-card__details">
-              <div class="mezcal-card__stat">
-                <span class="mezcal-card__stat-value">10–16</span>
-                <span class="mezcal-card__stat-label">Años maduración</span>
-              </div>
-              <div class="mezcal-card__stat">
-                <span class="mezcal-card__stat-value">45%</span>
-                <span class="mezcal-card__stat-label">Alc. Vol.</span>
-              </div>
-            </div>
-            <div class="mezcal-card__profile">
-              <p class="mezcal-card__profile-label">Perfil: <strong>Salvaje, raro y de enorme complejidad</strong></p>
-              <p class="mezcal-card__notes">Terroso, intenso, especiado, retrogusto largo y persistente.</p>
-            </div>
-            <button class="btn btn--outline btn--full">Lo Quiero</button>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -461,21 +541,27 @@
         </form>
         <div class="contacto__info" data-animate="fade-left">
           <div class="contacto__info-item">
-            <span class="contacto__info-icon">📍</span>
+            <span class="contacto__info-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </span>
             <div>
               <h4>Ubicación</h4>
               <p>Santa Ana del Río, Oaxaca, México</p>
             </div>
           </div>
           <div class="contacto__info-item">
-            <span class="contacto__info-icon">📧</span>
+            <span class="contacto__info-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </span>
             <div>
               <h4>Email</h4>
               <p>contacto@cruzdeoaxaca.com</p>
             </div>
           </div>
           <div class="contacto__info-item">
-            <span class="contacto__info-icon">📱</span>
+            <span class="contacto__info-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </span>
             <div>
               <h4>WhatsApp</h4>
               <p>Contáctanos directamente</p>

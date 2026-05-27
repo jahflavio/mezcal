@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Espadín — Cruz de Oaxaca | Mezcal Artesanal Premium</title>
+  <meta name="description" content="Descubre Mezcal Artesanal Espadín Cruz de Oaxaca. 100% orgánico, cultivado durante 6 a 8 años. 45% Alc. Vol. Santa Ana del Río, Oaxaca." />
+  <meta name="keywords" content="mezcal, espadín, artesanal, orgánico, Oaxaca, Cruz de Oaxaca" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body id="page-espadin" class="landing-page">
+
+  <!-- AGE GATE -->
+  <div id="age-gate" class="age-gate">
+    <div class="age-gate__content">
+      <img src="/img/label.jpg" alt="Cruz de Oaxaca Label" class="age-gate__logo" />
+      <h2 class="age-gate__title">¿Eres mayor de edad?</h2>
+      <p class="age-gate__text">Debes ser mayor de 18 años para acceder a este sitio.</p>
+      <div class="age-gate__buttons">
+        <button id="age-yes" class="btn btn--primary">Sí, soy mayor</button>
+        <button id="age-no" class="btn btn--outline">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="main-nav" class="nav scrolled">
+    <div class="nav__container">
+      <a href="/mezcal/" class="nav__logo">
+        <span class="nav__logo-text">Cruz <span class="nav__logo-accent">de</span> Oaxaca</span>
+      </a>
+      <button id="nav-toggle" class="nav__toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu" class="nav__menu">
+        <li><a href="/mezcal/#historia" class="nav__link">Historia</a></li>
+        <li><a href="/mezcal/#filosofia" class="nav__link">Filosofía</a></li>
+        <li><a href="/mezcal/#proceso" class="nav__link">Proceso</a></li>
+        <li><a href="/mezcal/#mezcales" class="nav__link active">Mezcales</a></li>
+        <li><a href="/mezcal/#experiencia" class="nav__link">Experiencia</a></li>
+        <li><a href="/mezcal/#contacto" class="nav__link btn btn--nav">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- LANDING HERO -->
+  <section class="landing-hero">
+    <div class="landing-hero__bg-glow"></div>
+    <div class="container landing-hero__container">
+      <div class="landing-hero__visual">
+        <div class="landing-hero__bottle-wrapper" data-animate="hero-bottle">
+          <img src="/img/bottle-espadin.png" alt="Botella Mezcal Espadín" class="landing-hero__bottle" />
+        </div>
+      </div>
+      <div class="landing-hero__text" data-animate="hero-text">
+        <span class="mezcal-card__agave">Agave angustifolia</span>
+        <h1 class="landing-hero__title">Espadín</h1>
+        <p class="landing-hero__subtitle">Nuestra raíz y equilibrio</p>
+        <p class="landing-hero__desc">El Espadín representa la tradición más viva de nuestro palenque. Cultivado de manera orgánica durante un periodo de 6 a 8 años en Santa Ana del Río, Oaxaca, este mezcal ofrece el balance perfecto entre el sabor dulce del maguey cocido y un sutil ahumado tradicional.</p>
+        <div class="landing-hero__specs">
+          <div class="spec-item">
+            <span class="spec-val">6–8</span>
+            <span class="spec-label">Años de Sol</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">45%</span>
+            <span class="spec-label">Alc. Vol.</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-val">Cobre</span>
+            <span class="spec-label">Alambique</span>
+          </div>
+        </div>
+        <a href="/mezcal/#contacto?mezcal=espadin" class="btn btn--primary landing-hero__cta">Adquirir Botella</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARÁCTER SENSORIAL -->
+  <section class="sensory">
+    <div class="container">
+      <div class="section__header" data-animate="fade-up">
+        <span class="section__label">Perfil de Sabor</span>
+        <h2 class="section__title">Un viaje sensorial al campo <span class="text-accent">oaxaqueño</span></h2>
+      </div>
+      <div class="sensory__grid">
+        <div class="sensory__wheel-container" data-animate="fade-right">
+          <h3>Equilibrio de Notas</h3>
+          <div class="sensory-wheel">
+            <div class="wheel-bar" style="--val: 85%; --color: var(--gold);">
+              <span class="wheel-label">Cuerpo / Estructura</span>
+              <div class="wheel-bar-inner"><div class="fill"></div></div>
+              <span class="wheel-val">85%</span>
+            </div>
+            <div class="wheel-bar" style="--val: 75%; --color: var(--green);">
+              <span class="wheel-label">Dulces / Frutales</span>
+              <div class="wheel-bar-inner"><div class="fill"></div></div>
+              <span class="wheel-val">75%</span>
+            </div>
+            <div class="wheel-bar" style="--val: 50%; --color: var(--gold-light);">
+              <span class="wheel-label">Ahumado / Tierra</span>
+              <div class="wheel-bar-inner"><div class="fill"></div></div>
+              <span class="wheel-val">50%</span>
+            </div>
+            <div class="wheel-bar" style="--val: 65%; --color: var(--red);">
+              <span class="wheel-label">Persistencia final</span>
+              <div class="wheel-bar-inner"><div class="fill"></div></div>
+              <span class="wheel-val">65%</span>
+            </div>
+          </div>
+        </div>
+        <div class="sensory__notes" data-animate="fade-left">
+          <div class="note-card">
+            <h4>Vista</h4>
+            <p>Luminoso y cristalino, con perlas uniformes que demuestran su excelente graduación alcohólica.</p>
+          </div>
+          <div class="note-card">
+            <h4>Nariz</h4>
+            <p>Tonos cítricos, toques herbales y un perfume dulce a maguey cocido y tierra húmeda.</p>
+          </div>
+          <div class="note-card">
+            <h4>Boca</h4>
+            <p>Clásico, redondo y sumamente versátil. Abre con notas frutales que dan paso a un humo suave y un retrogusto limpio y persistente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EL ARTE DE LA TIERRA -->
+  <section class="artwork-detail">
+    <div class="container artwork-detail__grid">
+      <div class="artwork-detail__content" data-animate="fade-right">
+        <span class="section__label">El Diseño</span>
+        <h2 class="section__title">Nuestra identidad grabada en <span class="text-accent">oro</span></h2>
+        <p>Cada botella de Cruz de Oaxaca lleva en su etiqueta un homenaje al protector mítico del mezcal: el jaguar mesoamericano, entrelazado con las hojas de los agaves silvestres y patrones prehispánicos geométricos.</p>
+        <p>Para nuestra variedad **Espadín**, el diseño resalta la elegancia y balance utilizando contrastes cálidos sobre un fondo premium, representando el equilibrio perfecto de este destilado.</p>
+      </div>
+      <div class="artwork-detail__visual" data-animate="scale-in">
+        <img src="/img/label-espadin.png" alt="Detalle de Etiqueta Espadín" class="artwork-detail__img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__logo">Cruz <span class="text-accent">de</span> Oaxaca</span>
+          <p class="footer__tagline">El alma del mezcal</p>
+        </div>
+        <div class="footer__links">
+          <a href="/mezcal/#historia">Historia</a>
+          <a href="/mezcal/#filosofia">Filosofía</a>
+          <a href="/mezcal/#proceso">Proceso</a>
+          <a href="/mezcal/#mezcales">Mezcales</a>
+          <a href="/mezcal/#contacto">Contacto</a>
+        </div>
+      </div>
+      <div class="footer__quote">
+        <p>Mantener viva la tradición que comenzó hace más de un siglo. El verdadero prestigio está en la coherencia y en la calidad que perdura.</p>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">Cruz de Oaxaca · Mezcal Artesanal · Santa Ana del Río, Oaxaca<br />100% Orgánico · 45% Alc. Vol. · Presentaciones de 750 ml</p>
+        <p class="footer__warning">El abuso en el consumo de este producto es nocivo para la salud.</p>
+        <p class="footer__copy">&copy; 2026 Cruz de Oaxaca. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
