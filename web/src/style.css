@@ -99,6 +99,13 @@ img { max-width: 100%; height: auto; display: block; }
 .nav__toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
 .nav__toggle span { display: block; width: 24px; height: 2px; background: var(--cream); margin: 5px 0; transition: var(--transition); }
 
+/* DROPDOWN */
+.nav__item--dropdown { position: relative; }
+.nav__dropdown { position: absolute; top: 100%; left: -1rem; background: rgba(18, 16, 14, 0.95); backdrop-filter: blur(12px); min-width: 180px; list-style: none; padding: 0.8rem 0; margin-top: 1rem; border: 1px solid rgba(201,168,76,0.1); border-radius: 4px; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; }
+.nav__item--dropdown:hover .nav__dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav__dropdown-link { display: block; padding: 0.6rem 1.5rem; color: var(--cream-dim); text-decoration: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; transition: var(--transition); }
+.nav__dropdown-link:hover { color: var(--gold); background: rgba(201,168,76,0.05); }
+
 /* ========================================
    HERO
    ======================================== */
@@ -758,6 +765,7 @@ img { max-width: 100%; height: auto; display: block; }
   .nav__menu { position: fixed; top: 0; right: -100%; width: 75%; height: 100vh; background: var(--dark); flex-direction: column; justify-content: center; gap: 2rem; padding: 2rem; transition: var(--transition); }
   .nav__menu.active { right: 0; }
   .nav__toggle { display: block; z-index: 1001; }
+  .nav__dropdown { position: static; background: transparent; border: none; border-left: 1px solid var(--gold); opacity: 1; visibility: visible; transform: none; margin-top: 1rem; margin-left: 1rem; padding-left: 0.5rem; }
   .proceso__steps { grid-template-columns: 1fr 1fr; }
   .mezcales__grid { grid-template-columns: 1fr; }
   .hero__bottle { max-width: 200px; }
